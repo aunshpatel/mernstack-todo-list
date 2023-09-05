@@ -1,5 +1,5 @@
 # Todo List
-This project is a simple todo list application based on MERN Stack
+This project is a simple todo list application based on MERN Stack.
 
 ## Screenshots
 
