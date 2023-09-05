@@ -9,7 +9,7 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <Link to="#">Todo List</Link>
+      <Link to="/todos">Todo List</Link>
       &nbsp;&nbsp;
       <Link to="/todos/new">Add New Todo</Link>
       &nbsp;&nbsp;
