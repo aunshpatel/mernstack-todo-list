@@ -11,7 +11,7 @@ export default function NavBar({ user, setUser }) {
     <nav>
       <Link to="#">Todo List</Link>
       &nbsp;&nbsp;
-      <Link to="#">Add New Todo</Link>
+      <Link to="/todos/new">Add New Todo</Link>
       &nbsp;&nbsp;
       <Link to="#">My Profile</Link>
       &nbsp;&nbsp;
