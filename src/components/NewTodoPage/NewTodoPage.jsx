@@ -12,13 +12,13 @@ export default function NewTodoForm({ handleAddNote }) {
         evt.preventDefault();
         // if (noteText === '') return;
         try {
-            // const newTodo = await todosAPI.createTodos({ taskText: taskText, taskStatus:taskStatus, startDate:startDate, endDate:endDate });
-            // setTaskText('');
-            // setTaskStatus('Pending');
-            // setStartDate('');
-            // setEndDate('');
-            // handleAddNote(newTodo);
-            const newTodo = await todosAPI.createTodos({ taskText: taskText});
+            const newTodo = await todosAPI.createTodos({ taskText: taskText, taskStatus:taskStatus, startDate:startDate, endDate:endDate });
+            setTaskText('');
+            setTaskStatus('Pending');
+            setStartDate('');
+            setEndDate('');
+            handleAddNote(newTodo);
+            // const newTodo = await todosAPI.createTodos({ taskText: taskText});
             setTaskText('');
             
             handleAddNote(newTodo);
