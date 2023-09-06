@@ -192,3 +192,13 @@ button[type="submit"] {
     transform: rotate(360deg);
   }
 }
+
+/* Todo List Page */
+.todoTableDiv {
+  justify-content: center;
+  display: flex;
+}
+.todoTableDiv > div{
+  width: 1200px;
+  margin-bottom: 20px;
+}
