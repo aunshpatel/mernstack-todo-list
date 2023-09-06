@@ -16,7 +16,12 @@ async function getTodos(req, res) {
     res.json(todos);
 }
 
+async function deleteTodos(req, res) {
+    await Todo.findByIdAndRemove(req.params.id);
+}
+
 module.exports = {
     createTodos,
-    getTodos
+    getTodos,
+    deleteTodos
 };

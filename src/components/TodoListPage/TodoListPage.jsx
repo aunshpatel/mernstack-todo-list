@@ -1,50 +1,14 @@
 import { useState, useEffect } from 'react';
 import * as todosAPI from "../../utilities/todos-api";
+// import DataTable from 'react-data-table-component';
 import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TablePagination, Paper } from '@mui/material';
 import '../../index.css'
 
 export default function TodoListPage() {
   const [todos, setTodos] = useState([]);
-  
-  //   {
-  //       name: '#',
-  //       selector: row => row.index,
-  //       sortable: true,
-  //   },
-  //   {
-  //       name: 'Task',
-  //       selector: row => row.task,
-  //       sortable: true,
-  //   },{
-  //     name: 'Status',
-  //     selector: row => row.status,
-  //     sortable: true,
-  //   },{
-  //     name: 'Start Date',
-  //     selector: row => row.startdate,
-  //     sortable: true,
-  //   },{
-  //     name: 'End Date',
-  //     selector: row => row.enddate,
-  //     sortable: true,
-  //   },{
-  //     name: '',
-  //     selector: row => row.update,
-  //     sortable: false,
-  //   },{
-  //     name: '',
-  //     selector: row => row.delete,
-  //     sortable: false,
-  //   },
-  // ];
-
-  // const paginationComponentOptions = {
-  //   rowsPerPageText: 'Rows Per Page',
-  //   rangeSeparatorText: 'of',
-  //   selectAllRowsItem: true,
-  // };
   const [pg, setpg] = useState(0);
   const [rpg, setrpg] = useState(5);
+
   function handleChangePage(event, newpage) {
     setpg(newpage);
   }
@@ -52,13 +16,6 @@ export default function TodoListPage() {
   function handleChangeRowsPerPage(event) {
       setrpg(parseInt(event.target.value, 10));
       setpg(0);
-  }
-  function updateTodo(todoID){
-    alert("Update Todo: "+todoID)
-  }
-
-  function deleteTodo(todoID){
-    alert("Delete Todo: "+todoID)
   }
 
   useEffect(() => {
@@ -69,6 +26,15 @@ export default function TodoListPage() {
     }
     getNotes();
   });
+
+  function updateTodo(todoID){
+    alert("Update Todo: "+todoID)
+  }
+
+  async function deleteTodo(todoID){
+    alert("Delete Todo: "+todoID)
+    await todosAPI.deleteTodos(todoID);
+  }
 
   return (
     <>

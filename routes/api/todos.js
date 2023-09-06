@@ -8,4 +8,6 @@ router.get('/', todosCtrl.getTodos);
 // POST /api/notes
 router.post('/create', todosCtrl.createTodos);
 
+router.delete('/delete/:id', todosCtrl.deleteTodos);
+
 module.exports = router;
