@@ -10,3 +10,4 @@ This project is a simple todo list application based on MERN Stack.
 - Node
 - HTML
 - CSS
+- Bootstrap
