@@ -8,14 +8,17 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <nav>
-      <Link to="/todos">Todo List</Link>
-      &nbsp;&nbsp;
-      <Link to="/todos/new">Add New Todo</Link>
-      &nbsp;&nbsp;
-      <Link to="#">My Profile</Link>
-      &nbsp;&nbsp;
-      <Link to="" onClick={handleLogOut}>Log Out</Link>
+    // <nav className="nav justify-content-end">
+    <header>
+      <nav className="nav">
+      <span>Welcome, {user.name}</span>
+      <div>
+        <Link className="nav-item nav-box" to="/todos">Todo List</Link>
+        <Link className="nav-item nav-box" to="/todos/new">Add New Todo</Link>
+        <Link className="nav-item nav-box" to="#">My Profile</Link>
+        <Link className="nav-item nav-box" to="" onClick={handleLogOut}>Log Out</Link>
+      </div>
     </nav>
+    </header>
   );
 }

@@ -22,7 +22,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--tan-4);
-  padding: 2vmin;
+  /* padding: 2vmin; */
   height: 100vh;
 }
 
@@ -201,4 +201,27 @@ button[type="submit"] {
 .todoTableDiv > div{
   width: 1200px;
   margin-bottom: 20px;
+}
+
+/* nav tab */
+.nav-box{
+  padding: 2px 8px 4px 8px;
+  text-decoration: underline;
+}
+
+nav, nav > div > *{
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+header{
+  background-color: #F67F00;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+h1{
+  margin-bottom:20px;
 }
