@@ -8,8 +8,6 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    // <nav className="nav justify-content-end">
-    <header>
       <nav className="nav">
       <span>Welcome, {user.name}</span>
       <div>
@@ -19,6 +17,5 @@ export default function NavBar({ user, setUser }) {
         <Link className="nav-item nav-box" to="" onClick={handleLogOut}>Log Out</Link>
       </div>
     </nav>
-    </header>
   );
 }

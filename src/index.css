@@ -213,12 +213,19 @@ nav, nav > div > *{
   font-size: 20px;
   font-weight: bold;
   color: white;
+  /* background-color: #F67F00; */
 }
 
-header{
+nav{
   background-color: #F67F00;
-  padding: 10px;
   margin-bottom: 10px;
+}
+nav>span{
+  padding-left: 20px;
+}
+
+nav>div{
+  padding-right: 20px;
 }
 
 h1{
@@ -230,11 +237,47 @@ h1{
   margin:0px !important
 }
 
-th{
+th, .col-form-label{
   font-size: 18px !important;
+  color: black !important;
   font-weight: bold !important;
 }
 
 td{
   font-size: 16px !important;
+}
+
+/* Form CSS */
+.formDiv{
+  display: flex;
+  justify-content: center;
+}
+
+.input-box{
+  display: block !important;
+  width:350px;
+}
+
+.inputField{
+  justify-content: center;
+  display: flex;
+  height:fit-content;
+  background-color: white;
+  margin: 0 !important;
+  padding: 0 !important;
+  /* align-items: center; */
+  flex-direction: column;
+}
+.inputField >input{
+  margin: 0 !important;
+}
+
+select {
+  display: block;
+}
+textarea{
+  height: auto;
+}
+.col-sm-4.col-form-label{
+  padding-left: 0;
 }
