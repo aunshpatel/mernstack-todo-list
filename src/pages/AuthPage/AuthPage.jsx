@@ -8,7 +8,7 @@ export default function AuthPage({ setUser }) {
     <main>
       <div>
         <div className='titleDiv'>
-          <h2>Welcome to The Todo List</h2>
+          <h1>Welcome to The Todo List</h1>
         </div>
       </div>
       <h3>{showSignUp ? 'Registration' : 'Login'} Page</h3>
