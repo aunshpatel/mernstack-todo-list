@@ -33,14 +33,14 @@ export default function LoginForm({ setUser }) {
         <div class="formDiv">
           <form onSubmit={handleSubmit} className="input-box">
               <div class="row mb-4">
-                  <label for="inputEmail3" class="col-sm-4 col-form-label">Email:</label>
-                  <div class="col-sm-8 inputField">
+                  <label for="inputEmail3" class="col-sm-12 col-md-4 col-form-label">Email:</label>
+                  <div class="col-sm-12 col-md-8 inputField">
                     <input className="todo-input" type="text" name="email" value={credentials.email} onChange={handleChange} required />
                   </div>
               </div>
               <div class="row mb-4">
-                  <label for="inputPassword3" class="col-sm-4 col-form-label">Password:</label>
-                  <div class="col-sm-8 inputField">
+                  <label for="inputPassword3" class="col-sm-12 col-md-4 col-form-label">Password:</label>
+                  <div class="col-sm-12 col-md-8 inputField">
                     <input className="todo-input" type="password" name="password" value={credentials.password} onChange={handleChange} required />
                   </div>
               </div>
