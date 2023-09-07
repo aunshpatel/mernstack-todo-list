@@ -281,3 +281,12 @@ textarea{
 .col-sm-4.col-form-label{
   padding-left: 0;
 }
+
+.btn.btn-primary.btn-lg{
+  background-color:#F67F00;
+}
+
+.new-note-form{
+  padding-top: 14px;
+  padding-bottom: 14px;
+}

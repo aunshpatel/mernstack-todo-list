@@ -29,14 +29,25 @@ export default function LoginForm({ setUser }) {
 
   return (
     <div>
-      <div className="form-container">
-        <form autoComplete="off" onSubmit={handleSubmit}>
-          <label>Email</label>
-          <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
-          <label>Password</label>
-          <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-          <button type="submit">LOG IN</button>
-        </form>
+      <div class="new-note-form">
+        <div class="formDiv">
+          <form onSubmit={handleSubmit} className="input-box">
+              <div class="row mb-4">
+                  <label for="inputEmail3" class="col-sm-4 col-form-label">Email:</label>
+                  <div class="col-sm-8 inputField">
+                    <input className="todo-input" type="text" name="email" value={credentials.email} onChange={handleChange} required />
+                  </div>
+              </div>
+              <div class="row mb-4">
+                  <label for="inputPassword3" class="col-sm-4 col-form-label">Password:</label>
+                  <div class="col-sm-8 inputField">
+                    <input className="todo-input" type="password" name="password" value={credentials.password} onChange={handleChange} required />
+                  </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg">Login</button>
+            
+          </form>
+        </div>
       </div>
       <p className="error-message">&nbsp;{error}</p>
     </div>
