@@ -290,3 +290,13 @@ textarea{
   padding-top: 14px;
   padding-bottom: 14px;
 }
+
+.titleDiv{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+/* .titleDiv > *{
+
+  width:350px;
+} */
