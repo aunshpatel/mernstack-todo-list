@@ -2,6 +2,8 @@ export default function ProfilePage({ user, setUser }) {
   return (
     <div>
       <div class="new-note-form">
+        <h2>My Profile:</h2>
+        <br />
         <div class="formDiv">
           <form className="input-box">
               <div class="row mb-4">
