@@ -43,7 +43,7 @@ export default function TodoListPage() {
     <>
       <h1>Todo List</h1>
       {todos.length === 0 ? (
-        <p>No Todo Added Yet!</p>
+        <h3>No Todo Added Yet!</h3>
       ) : (
        <div className="todoTableDiv">
          <div>
