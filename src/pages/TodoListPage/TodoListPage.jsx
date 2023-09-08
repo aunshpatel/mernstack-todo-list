@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 
 export default function TodoListPage() {
   const navigate = useNavigate();
-
   const [todos, setTodos] = useState([]);
   const [pg, setpg] = useState(0);
   const [rpg, setrpg] = useState(5);
@@ -30,9 +29,9 @@ export default function TodoListPage() {
     getNotes();
   });
 
-  function updateTodo(todoID){
+  async function updateTodo(todoID){
     alert("Update Todo: "+todoID);
-    navigate(`todos/update/${todoID}`);
+    navigate(`update/${todoID}`);
   }
 
   async function deleteTodo(todoID){
@@ -85,14 +84,8 @@ export default function TodoListPage() {
           </Table>
         </TableContainer>
         <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
-          component="div"
-          count={todos.length}
-          rowsPerPage={rpg}
-          page={pg}
-          onPageChange={handleChangePage}
-          onRowsPerPageChange={handleChangeRowsPerPage}
-        />
+          rowsPerPageOptions={[5, 10, 25]} component="div"  count={todos.length} rowsPerPage={rpg} page={pg} 
+          onPageChange={handleChangePage} onRowsPerPageChange={handleChangeRowsPerPage} />
         </div>
        </div>
       )}
