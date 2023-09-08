@@ -3,7 +3,7 @@ import * as todosAPI from '../../utilities/todos-api';
 import "../../index.css";
 import { useNavigate } from "react-router-dom";
 
-export default function NewTodoForm({ handleAddNote }) {
+export default function NewTodoForm() {
     const navigate = useNavigate();
     const [taskText, setTaskText] = useState('');
     const [taskStatus, setTaskStatus] = useState('Pending');
@@ -12,9 +12,8 @@ export default function NewTodoForm({ handleAddNote }) {
 
     async function handleSubmit(evt) {
         evt.preventDefault();
-        // if (noteText === '') return;
         try {
-            const newTodo = await todosAPI.createTodos({ taskText: taskText, taskStatus:taskStatus, startDate:startDate, endDate:endDate });
+            await todosAPI.createTodos({ taskText: taskText, taskStatus: taskStatus, startDate: startDate, endDate: endDate });
             setTaskText('');
             setTaskStatus('Pending');
             setStartDate('');

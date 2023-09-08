@@ -2,9 +2,12 @@ import { useState, useEffect } from 'react';
 import * as todosAPI from "../../utilities/todos-api";
 // import DataTable from 'react-data-table-component';
 import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TablePagination, Paper } from '@mui/material';
-import '../../index.css'
+import '../../index.css';
+import { useNavigate } from "react-router-dom";
 
 export default function TodoListPage() {
+  const navigate = useNavigate();
+
   const [todos, setTodos] = useState([]);
   const [pg, setpg] = useState(0);
   const [rpg, setrpg] = useState(5);
@@ -28,7 +31,8 @@ export default function TodoListPage() {
   });
 
   function updateTodo(todoID){
-    alert("Update Todo: "+todoID)
+    alert("Update Todo: "+todoID);
+    navigate(`todos/update/${todoID}`);
   }
 
   async function deleteTodo(todoID){
