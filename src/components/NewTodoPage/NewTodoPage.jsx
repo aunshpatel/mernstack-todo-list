@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import * as todosAPI from '../../utilities/todos-api';
-import "../../index.css"
-// import './NewNoteForm.css';
+import "../../index.css";
+import { useNavigate } from "react-router-dom";
 
 export default function NewTodoForm({ handleAddNote }) {
+    const navigate = useNavigate();
     const [taskText, setTaskText] = useState('');
     const [taskStatus, setTaskStatus] = useState('Pending');
     const [startDate, setStartDate] = useState('');
@@ -18,11 +19,9 @@ export default function NewTodoForm({ handleAddNote }) {
             setTaskStatus('Pending');
             setStartDate('');
             setEndDate('');
-            handleAddNote(newTodo);
-            // const newTodo = await todosAPI.createTodos({ taskText: taskText});
-            setTaskText('');
             
-            handleAddNote(newTodo);
+            alert('Todo added successfully. You will now be redirected to the Todo List Page.');
+            navigate('/todos');
         } catch (err) {
             console.log('Error creating todo: ', err);
         }
