@@ -13,7 +13,7 @@ export default function NavBar({ user, setUser }) {
       <div>
         <Link className="nav-item nav-box" to="/todos">Todo List</Link>
         <Link className="nav-item nav-box" to="/todos/new">Add New Todo</Link>
-        <Link className="nav-item nav-box" to="#">My Profile</Link>
+        <Link className="nav-item nav-box" to="/profilepage">My Profile</Link>
         <Link className="nav-item nav-box" to="" onClick={handleLogOut}>Log Out</Link>
       </div>
     </nav>

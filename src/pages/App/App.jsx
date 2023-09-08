@@ -6,7 +6,9 @@ import '../../index.css'
 import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
 import NewTodoForm from '../../components/NewTodoPage/NewTodoPage';
-import MyTodosPage from '../../components/TodoListPage/TodoListPage'
+import MyTodosPage from '../../pages/TodoListPage/TodoListPage';
+import UpdateTodoForm from '../../components/UpdateTodo/UpdateTodo';
+import ProfilePage from '../../components/MyProfilePage/MyProfilePage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -20,6 +22,8 @@ export default function App() {
               {/* Route components in here */}
               <Route path="/todos/new" element={<NewTodoForm />} />
               <Route path="/todos" element={<MyTodosPage />} />
+              <Route path="/todos/update/:id" element={<UpdateTodoForm />} />
+              <Route path="/profilepage" element={<ProfilePage  user={user} setUser={setUser}/>} />
             </Routes>
           </>
           :
