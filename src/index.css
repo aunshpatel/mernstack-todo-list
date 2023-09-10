@@ -312,7 +312,4 @@ textarea{
   display: flex;
   align-items: center;
 }
-/* .titleDiv > *{
-
-  width:350px;
-} */
+table{border:1px solid white;}

@@ -39,13 +39,13 @@ export default function NewTodoForm() {
                     <div class="row mb-4">
                         <label for="inputEmail3" class="col-sm-4 col-form-label">Task:</label>
                         <div class="col-sm-8 inputField">
-                            <textarea className="todo-input" value={taskText} onChange={(evt) => setTaskText(evt.target.value)} rows="5"></textarea>
+                            <textarea className="todo-input" value={taskText} onChange={(evt) => setTaskText(evt.target.value)} rows="5" required></textarea>
                         </div>
                     </div>
                     <div class="row mb-4">
                         <label for="inputPassword3" class="col-sm-4 col-form-label">Status:</label>
                         <div class="col-sm-8 inputField">
-                            <select className="form-select" name="todo-status-option" onChange={onOptionChangeHandler}>
+                            <select className="form-select" name="todo-status-option" onChange={onOptionChangeHandler} required>
                                 <option value="Pending">Pending</option>
                                 <option value="In Progress">In Progress</option>
                                 <option value="Complete">Complete</option>
@@ -55,13 +55,13 @@ export default function NewTodoForm() {
                     <div class="row mb-4">
                         <label for="inputEmail3" class="col-sm-4 col-form-label"> Start Date:</label>
                         <div class="col-sm-8 inputField">
-                            <input type="date" className="todo-start-date" value={startDate} onChange={(evt) => setStartDate(evt.target.value)}/>
+                            <input type="date" className="todo-start-date" value={startDate} onChange={(evt) => setStartDate(evt.target.value)} required />
                         </div>
                     </div>
                     <div class="row mb-4">
                         <label for="inputEmail3" class="col-sm-4 col-form-label">End Date:</label>
                         <div class="col-sm-8 inputField">
-                            <input type="date" className="todo-end-date" value={endDate} onChange={(evt) => setEndDate(evt.target.value)}/>
+                            <input type="date" className="todo-end-date" value={endDate} onChange={(evt) => setEndDate(evt.target.value)} required />
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg">Add Todo</button>

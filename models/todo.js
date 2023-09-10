@@ -9,18 +9,21 @@ const todoSchema =  new Schema({
     taskStatus:{
         type: String,
         enum: ['Pending', 'In Progress', 'Complete'],
+        required: true,
     },
     startDate:{
         type: String,
         default: function() {
             return new Date();
         },
+        required: true,
     },
     endDate:{
         type: String,
         default: function() {
             return new Date();
         },
+        required: true,
     },
     user: {
         type: Schema.Types.ObjectId,
