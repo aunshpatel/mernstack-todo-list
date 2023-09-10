@@ -1,20 +1,38 @@
 import { useState, useEffect } from 'react';
 import * as todosAPI from '../../utilities/todos-api';
 import "../../index.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
-export default function UpdateTodoForm(todoID) {
+export default function UpdateTodoForm() {
     const navigate = useNavigate();
-    const [taskText, setTaskText] = useState([]);
-    const [taskStatus, setTaskStatus] = useState([]);
-    const [startDate, setStartDate] = useState([]);
-    const [endDate, setEndDate] = useState([]);
+    const location = useLocation();
+    const todoID = location.state.todoID;
+    const [todo, setTodo] = useState([]);
+    const [taskText, setTaskText] = useState('');
+    const [taskStatus, setTaskStatus] = useState('');
+    const [startDate, setStartDate] = useState('');
+    const [endDate, setEndDate] = useState('');
+
+    useEffect(() => {
+        async function getTodoByID(id) {
+          const todo = await todosAPI.getTodoByID(id);
+          console.log(todo);
+          setTodo(todo);
+        }
+        getTodoByID(todoID);
+        setTaskText(todo.taskText);
+        setTaskStatus(todo.taskStatus);
+        setStartDate(todo.startDate);
+        setEndDate(todo.endDate);
+      },[]);
+
 
     async function handleSubmit(evt) {
         evt.preventDefault();
         try {
             // const updateTodo = await todosAPI.updateTodo({ taskText: taskText, taskStatus:taskStatus, startDate:startDate, endDate:endDate });
-            await todosAPI.updateTodo({ taskText: taskText, taskStatus:taskStatus, startDate:startDate, endDate:endDate });
+            console.log(todoID);
+            await todosAPI.updateTodos(todoID, { taskText: taskText, taskStatus:taskStatus, startDate:startDate, endDate:endDate });
             setTaskText('');
             setTaskStatus('Pending');
             setStartDate('');

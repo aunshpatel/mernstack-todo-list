@@ -13,12 +13,13 @@ export function createTodos(todoData) {
 export function deleteTodos(todoId) {
     return sendRequest(`${BASE_URL}/delete/${todoId}`, 'DELETE');
 }
-// export async function updateTodo(noteId, updatedData) {
-//     const updatedNote = await sendRequest(`${BASE_URL}/update/${noteId}`, 'PUT', updatedData);
-//     return updatedNote.data;
-// }
-export async function updateTodo(noteId) {
-    const updatedNote = await sendRequest(`${BASE_URL}/update/${noteId}`, 'PUT', noteId);
-    return updatedNote.noteId;
+
+export async function updateTodos(todoId, todoData) {
+    // const updatedNote = await sendRequest(`${BASE_URL}/update/${noteId}`, 'PUT', noteId, taskStatus, startDate,endDate);
+    // return updatedNote;
+    return sendRequest(`${BASE_URL}/update/${todoId}`, 'PUT', todoData);
 }
 
+export async function getTodoByID(todoId) {
+    return sendRequest(`${BASE_URL}/${todoId}`, 'GET');
+}

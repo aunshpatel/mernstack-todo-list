@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import * as todosAPI from "../../utilities/todos-api";
-// import DataTable from 'react-data-table-component';
 import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TablePagination, Paper } from '@mui/material';
 import '../../index.css';
 import { useNavigate } from "react-router-dom";
@@ -10,6 +9,7 @@ export default function TodoListPage() {
   const [todos, setTodos] = useState([]);
   const [pg, setpg] = useState(0);
   const [rpg, setrpg] = useState(5);
+  const [editTodo, setEditTodoId] = useState(null);
 
   function handleChangePage(event, newpage) {
     setpg(newpage);
@@ -23,15 +23,15 @@ export default function TodoListPage() {
   useEffect(() => {
     async function getNotes() {
       const todos = await todosAPI.getAll();
+      console.log(todos);
       // const sortedNotes = sortNotes(notes, sortOrder);
       setTodos(todos);
     }
     getNotes();
-  });
+  },[]);
 
-  async function updateTodo(todoID){
-    alert("Update Todo: "+todoID);
-    navigate(`update/${todoID}`);
+  async function updateTodo(id){
+    navigate(`update/${id}`, {state:{todoID:id}});
   }
 
   async function deleteTodo(todoID){
