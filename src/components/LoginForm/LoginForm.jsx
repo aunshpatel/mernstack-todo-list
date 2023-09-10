@@ -26,7 +26,7 @@ export default function LoginForm({ setUser }) {
       setUser(user);
       navigate('/todos');
     } catch {
-      setError('Log In Failed - Try Again');
+      setError('Log In Failed! Please check your email and/or password and enter the correct values.');
     }
   }
 
