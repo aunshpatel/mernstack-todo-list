@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import * as todosAPI from "../../utilities/todos-api";
-import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TablePagination, Paper } from '@mui/material';
+import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TablePagination } from '@mui/material';
 import '../../index.css';
 import { useNavigate } from "react-router-dom";
 
@@ -9,7 +9,6 @@ export default function TodoListPage() {
   const [todos, setTodos] = useState([]);
   const [pg, setpg] = useState(0);
   const [rpg, setrpg] = useState(5);
-  const [editTodo, setEditTodoId] = useState(null);
 
   function handleChangePage(event, newpage) {
     setpg(newpage);
