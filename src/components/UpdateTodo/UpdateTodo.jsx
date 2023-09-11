@@ -84,7 +84,7 @@ export default function UpdateTodoForm() {
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg">Update Todo</button>
                 </form>
-         </div>
+            </div>
        </div> 
     );
 }
