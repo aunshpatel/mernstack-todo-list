@@ -49,7 +49,7 @@ export default class SignUpForm extends Component {
                     </div>
                 </div>
                 <div class="row mb-4">
-                    <label for="inputPassword3" class="col-sm-12 col-md-6 col-form-label">Password:</label>
+                    <label for="inputPassword3" class="col-sm-12 col-md-6 col-form-label">Email ID:</label>
                     <div class="col-sm-12 col-md-6 inputField">
                       <input className="todo-input" type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
                     </div>
