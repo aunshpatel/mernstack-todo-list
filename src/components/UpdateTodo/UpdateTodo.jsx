@@ -30,7 +30,6 @@ export default function UpdateTodoForm() {
     async function handleSubmit(evt) {
         evt.preventDefault();
         try {
-            // const updateTodo = await todosAPI.updateTodo({ taskText: taskText, taskStatus:taskStatus, startDate:startDate, endDate:endDate });
             console.log(todoID);
             await todosAPI.updateTodos(todoID, { taskText: taskText, taskStatus:taskStatus, startDate:startDate, endDate:endDate });
             setTaskText('');
@@ -55,11 +54,9 @@ export default function UpdateTodoForm() {
             <h1>Update Todo</h1>
             <div className='formDiv'>
                 <form onSubmit={handleSubmit} className="input-box">
-                {/* <form className="input-box"> */}
                     <div class="row mb-4">
                         <label for="inputEmail3" class="col-sm-4 col-form-label">Task:</label>
                         <div class="col-sm-8 inputField">
-                            {/* <textarea className="todo-input" rows="5"></textarea> */}
                             <textarea className="todo-input" value={taskText} onChange={(evt) => setTaskText(evt.target.value)} rows="5"></textarea>
                         </div>
                     </div>
@@ -67,7 +64,6 @@ export default function UpdateTodoForm() {
                         <label for="inputPassword3" class="col-sm-4 col-form-label">Status:</label>
                         <div class="col-sm-8 inputField">
                             <select className="form-select" name="todo-status-option" onChange={onOptionChangeHandler} value={taskStatus}>
-                            {/* <select className="form-select" name="todo-status-option" onChange={onOptionChangeHandler}> */}
                                 <option value="Pending">Pending</option>
                                 <option value="In Progress">In Progress</option>
                                 <option value="Complete">Complete</option>
@@ -77,14 +73,12 @@ export default function UpdateTodoForm() {
                     <div class="row mb-4">
                         <label for="inputEmail3" class="col-sm-4 col-form-label"> Start Date:</label>
                         <div class="col-sm-8 inputField">
-                            {/* <input type="date" className="todo-start-date"/> */}
                             <input type="date" className="todo-start-date" value={startDate} onChange={(evt) => setStartDate(evt.target.value)}/>
                         </div>
                     </div>
                     <div class="row mb-4">
                         <label for="inputEmail3" class="col-sm-4 col-form-label">End Date:</label>
                         <div class="col-sm-8 inputField">
-                            {/* <input type="date" className="todo-end-date"/> */}
                             <input type="date" className="todo-end-date" value={endDate} onChange={(evt) => setEndDate(evt.target.value)}/>
                         </div>
                     </div>

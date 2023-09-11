@@ -19,7 +19,6 @@ export default function App() {
           <>
             <NavBar user={user} setUser={setUser} />
             <Routes>
-              {/* Route components in here */}
               <Route path="/todos/new" element={<NewTodoForm />} />
               <Route path="/todos" element={<MyTodosPage />} />
               <Route path="/todos/update/:id" element={<UpdateTodoForm />} />

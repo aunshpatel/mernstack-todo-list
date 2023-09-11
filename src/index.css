@@ -26,8 +26,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 #root {
@@ -108,7 +107,7 @@ input {
   border: .1vmin solid var(--tan-3);
   border-radius: .5vmin;
   color: var(--text-dark);
-  background-image: none !important; /* prevent lastpass */
+  background-image: none !important;
   outline: none;
 }
 
@@ -220,11 +219,11 @@ nav{
   background-color: #F67F00;
   margin-bottom: 10px;
 }
-nav>span{
+nav > span{
   padding-left: 20px;
 }
 
-nav>div{
+nav > div{
   padding-right: 20px;
 }
 
@@ -281,7 +280,6 @@ td{
   background-color: white;
   margin: 0 !important;
   padding: 0 !important;
-  /* align-items: center; */
   flex-direction: column;
 }
 .inputField >input{

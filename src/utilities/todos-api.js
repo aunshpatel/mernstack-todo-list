@@ -15,8 +15,6 @@ export function deleteTodos(todoId) {
 }
 
 export async function updateTodos(todoId, todoData) {
-    // const updatedNote = await sendRequest(`${BASE_URL}/update/${noteId}`, 'PUT', noteId, taskStatus, startDate,endDate);
-    // return updatedNote;
     return sendRequest(`${BASE_URL}/update/${todoId}`, 'PUT', todoData);
 }
 

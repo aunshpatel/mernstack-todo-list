@@ -24,7 +24,6 @@ export default function TodoListPage() {
     async function getNotes() {
       const todos = await todosAPI.getAll();
       console.log(todos);
-      // const sortedNotes = sortNotes(notes, sortOrder);
       setTodos(todos);
     }
     getNotes();
@@ -71,7 +70,6 @@ export default function TodoListPage() {
                   <TableCell>{todo.startDate}</TableCell>
                   <TableCell>{todo.endDate}</TableCell>
                   <TableCell>
-                    {/* <Button variant="contained" onClick={() => handleClick(row.id)}>Click me</Button> */}
                     <Button style={{ backgroundColor: "#F67F00" }} variant="contained" onClick={() => updateTodo(todo._id)}>Update</Button>
                   </TableCell>
                   <TableCell>
@@ -89,7 +87,6 @@ export default function TodoListPage() {
         </div>
        </div>
       )}
-      
     </>
   );
 }

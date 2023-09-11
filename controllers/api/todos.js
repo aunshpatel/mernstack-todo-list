@@ -21,7 +21,6 @@ async function deleteTodos(req, res) {
 }
 
 async function updateTodos(req, res) {
-    // var _id = req.body._id;
     var todoData = {
         taskText: req.body.taskText,
         taskStatus: req.body.taskStatus,
@@ -31,17 +30,6 @@ async function updateTodos(req, res) {
     const updatedTodo = await Todo.findByIdAndUpdate(req.params.id, todoData);
 
     res.json(updatedTodo);
-    // Todo.findByIdAndUpdate(_id, todoData, function (err, inventory) {
-    //   if (err) {
-    //     res.status(500);
-    //     console.log("Error:"+err);
-    //     res.send(err);
-    //   } else {
-    //     res.status(200);
-    //     console.log("Success");
-    //     res.send(todoData);
-    //   }
-    // });
 }
 
 async function getTodoByID(req, res) {

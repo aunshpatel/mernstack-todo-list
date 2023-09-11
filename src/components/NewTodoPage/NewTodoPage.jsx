@@ -65,52 +65,6 @@ export default function NewTodoForm() {
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg">Add Todo</button>
-                    {/* <table>
-                        <tbody>
-                            <tr>
-                                <td className='form-title'>
-                                    Task:
-                                </td>
-                                <td>
-                                    <textarea className="todo-input" value={taskText} onChange={(evt) => setTaskText(evt.target.value)}></textarea>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className='form-title'>
-                                    Status:
-                                </td>
-                                <td>
-                                    <select className="form-select" name="todo-status-option" onChange={onOptionChangeHandler}>
-                                        <option value="Pending">Pending</option>
-                                        <option value="In Progress">In Progress</option>
-                                        <option value="Complete">Complete</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className='form-title'>
-                                    Start Date:
-                                </td>
-                                <td>
-                                    
-                                    <input type="date" className="todo-start-date" value={startDate} onChange={(evt) => setStartDate(evt.target.value)}/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className='form-title'>
-                                    End Date:
-                                </td>
-                                <td>
-                                    <input type="date" className="todo-end-date" value={endDate} onChange={(evt) => setEndDate(evt.target.value)}/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colSpan="2">
-                                    <button type="submit" className="add-todo-button">Add Todo</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table> */}
                 </form>
          </div>
        </div> 
