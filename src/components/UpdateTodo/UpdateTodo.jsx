@@ -18,7 +18,6 @@ export default function UpdateTodoForm() {
           const todo = await todosAPI.getTodoByID(id);
           console.log(todo);
           setTodo(todo);
-        //   getTodoByID(todoID);
           setTaskText(todo.taskText);
           setTaskStatus(todo.taskStatus);
           setStartDate(todo.startDate);
