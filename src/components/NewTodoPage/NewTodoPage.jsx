@@ -20,7 +20,7 @@ export default function NewTodoForm() {
             setEndDate('');
             
             alert('Todo added successfully. You will now be redirected to the Todo List Page.');
-            navigate('/todos');
+            navigate('/');
         } catch (err) {
             console.log('Error creating todo: ', err);
         }

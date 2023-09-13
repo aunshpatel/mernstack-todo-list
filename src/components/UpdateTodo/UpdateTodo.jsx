@@ -38,7 +38,7 @@ export default function UpdateTodoForm() {
             setEndDate('');
             
             alert('Todo updated successfully. You will now be redirected to the Todo List Page.');
-            navigate('/todos');
+            navigate('/');
         } catch (err) {
             console.log('Error creating todo: ', err);
         }

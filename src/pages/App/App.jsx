@@ -19,9 +19,9 @@ export default function App() {
           <>
             <NavBar user={user} setUser={setUser} />
             <Routes>
-              <Route path="/todos/new" element={<NewTodoForm />} />
-              <Route path="/todos" element={<MyTodosPage />} />
-              <Route path="/todos/update/:id" element={<UpdateTodoForm />} />
+              <Route path="/new" element={<NewTodoForm />} />
+              <Route path="/" element={<MyTodosPage />} />
+              <Route path="/update/:id" element={<UpdateTodoForm />} />
               <Route path="/profilepage" element={<ProfilePage  user={user} setUser={setUser}/>} />
               <Route path="/profilepage/update" element={<UpdateProfilePage  user={user} setUser={setUser}/>} />
             </Routes>

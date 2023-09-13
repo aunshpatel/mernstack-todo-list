@@ -11,8 +11,8 @@ export default function NavBar({ user, setUser }) {
       <nav className="nav">
       <span>Welcome, {user.name}</span>
       <div>
-        <Link className="nav-item nav-box" to="/todos">Todo List</Link>
-        <Link className="nav-item nav-box" to="/todos/new">Add New Todo</Link>
+        <Link className="nav-item nav-box" to="/">Todo List</Link>
+        <Link className="nav-item nav-box" to="/new">Add New Todo</Link>
         <Link className="nav-item nav-box" to="/profilepage">My Profile</Link>
         <Link className="nav-item nav-box" to="" onClick={handleLogOut}>Log Out</Link>
       </div>
