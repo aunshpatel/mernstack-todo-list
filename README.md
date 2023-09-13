@@ -47,5 +47,5 @@ Deployed URL: https://mern-todo-list-41e06058254a.herokuapp.com/
 - As a registered user, I should be able to view my todos in calendar view (on index page).
 - As a registered user, I should be able to add todos to my calendar(google, etc).
 
-- As an unregistered user, I should be able to login and logout via social media(Google/Facebook/Apple).
+- As an unregistered user, I should be able to register myself via social media(Google/Facebook/Apple).
 - As an unregistered user, I should be able to login and logout via social media(Google/Facebook/Apple).
