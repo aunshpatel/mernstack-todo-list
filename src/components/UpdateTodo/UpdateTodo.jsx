@@ -38,7 +38,7 @@ export default function UpdateTodoForm() {
             setEndDate('');
             
             alert('Todo updated successfully. You will now be redirected to the Todo List Page.');
-            navigate('/');
+            navigate('/todos');
         } catch (err) {
             console.log('Error creating todo: ', err);
         }
@@ -46,7 +46,7 @@ export default function UpdateTodoForm() {
 
     const onOptionChangeHandler = (evt) => {
         console.log("User Selected Value - ", evt.target.value);
-        setTaskStatus(evt.target.value)
+        // setTaskStatus(evt.target.value)
     }
 
     return (
