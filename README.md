@@ -45,7 +45,8 @@ Deployed URL: https://mern-todo-list-41e06058254a.herokuapp.com/
 - As a registered user, I should be able to delete my profile.
 - As a registered user, I should be able to update my password.
 - As a registered user, I should be able to view my todos in calendar view (on index page).
-- As a registered user, I should be able to add todos to my calendar(google account, etc)
+- As a registered user, I should be able to add todos to my calendar(google, icloud, etc).
+- As a registered user, I should be able to add start time and end time. I should also be able to toggle between all day event and event with start time and end time.
 
 - As an unregistered user, I should be able to register myself via social media(Google/Facebook/Apple).
 - As an unregistered user, I should be able to login and logout via social media(Google/Facebook/Apple).
