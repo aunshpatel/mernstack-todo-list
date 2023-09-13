@@ -46,7 +46,7 @@ export default function UpdateTodoForm() {
 
     const onOptionChangeHandler = (evt) => {
         console.log("User Selected Value - ", evt.target.value);
-        // setTaskStatus(evt.target.value)
+        setTaskStatus(evt.target.value)
     }
 
     return (
