@@ -12,3 +12,8 @@ export async function login(credentials) {
 export async function checkToken() {
   return sendRequest(`${BASE_URL}/check-token`);
 }
+
+export async function updateUser(userData) {
+  // console.log("updateUser function userID:"+userID)
+  return sendRequest(`${BASE_URL}/update`, 'PUT', userData);
+}

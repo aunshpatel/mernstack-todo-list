@@ -47,3 +47,10 @@ export function checkToken() {
   return usersAPI.checkToken()
     .then(dateStr => new Date(dateStr));
 }
+
+export async function updateUser(credentials) {
+  const token = await usersAPI.updateUser(credentials);
+  console.log("updateUser token:"+token);
+  localStorage.setItem('token', token);
+  return getUser();
+}

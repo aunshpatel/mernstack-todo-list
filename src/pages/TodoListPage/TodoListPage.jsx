@@ -34,11 +34,9 @@ export default function TodoListPage() {
 
   async function deleteTodo(todoID){
     await todosAPI.deleteTodos(todoID);
-    alert("Delete Todo: "+todoID);
+    alert("Todo Deleted Successfully!");
     console.log('delete function');
     window.location.reload();
-    // return false;
-    // navigate('/todos')
   }
 
   return (

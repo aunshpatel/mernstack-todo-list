@@ -5,7 +5,9 @@ const User = require('../../models/user');
 module.exports = {
   create,
   login,
-  checkToken
+  checkToken,
+  getUserByID,
+  updateUser
 };
 
 function checkToken(req, res) {
@@ -35,6 +37,26 @@ async function login(req, res) {
   } catch (err) {
     res.status(400).json('Bad Credentials');
   }
+}
+
+async function getUserByID(req, res) {
+  const user = await User.findById(req.params.id);
+  res.json(user);
+}
+
+async function updateUser(req, res) {
+  var profileData = {
+      name: req.body.name,
+      email: req.body.email,
+  };
+  console.log("ProfileData:"+profileData);
+  const updatedUser = await User.findByIdAndUpdate(req.user._id, profileData, {new:true});
+    console.log("Updated user: "+updatedUser);
+    const token = createJWT(updatedUser);
+    console.log("token new:"+token)
+    // localStorage.setItem('token', token);
+    // res.json(token);
+  res.json(token);
 }
 
 /*--- Helper Functions --*/

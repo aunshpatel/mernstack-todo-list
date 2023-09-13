@@ -9,7 +9,7 @@ import NewTodoForm from '../../components/NewTodoPage/NewTodoPage';
 import MyTodosPage from '../../pages/TodoListPage/TodoListPage';
 import UpdateTodoForm from '../../components/UpdateTodo/UpdateTodo';
 import ProfilePage from '../../components/MyProfilePage/MyProfilePage';
-
+import UpdateProfilePage from '../../components/UpdateProfile/UpdateProfile';
 export default function App() {
   const [user, setUser] = useState(getUser());
 
@@ -23,6 +23,7 @@ export default function App() {
               <Route path="/todos" element={<MyTodosPage />} />
               <Route path="/todos/update/:id" element={<UpdateTodoForm />} />
               <Route path="/profilepage" element={<ProfilePage  user={user} setUser={setUser}/>} />
+              <Route path="/profilepage/update" element={<UpdateProfilePage  user={user} setUser={setUser}/>} />
             </Routes>
           </>
           :

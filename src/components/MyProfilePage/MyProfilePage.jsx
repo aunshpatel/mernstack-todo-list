@@ -1,4 +1,17 @@
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import * as usersServices from '../../utilities/users-service';
+
 export default function ProfilePage({ user, setUser }) {
+  const navigate = useNavigate();
+
+  function updateMyProfile(id){
+    navigate('/profilepage/update', {state:{userID:id}});
+  }
+
+  useEffect(()=>{
+    setUser(usersServices.getUser());
+  }, [])
   return (
     <div>
       <div class="new-note-form">
@@ -18,6 +31,7 @@ export default function ProfilePage({ user, setUser }) {
                     <label for="inputEmail3" class="col-form-label">{user.email}</label>
                   </div>
               </div>
+              <button type="submit" class="btn btn-primary btn-lg" onClick={() => updateMyProfile(user._id)}>Click Here To Update Profile</button>
           </form>
         </div>
       </div>
