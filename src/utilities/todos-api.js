@@ -11,7 +11,9 @@ export function createTodos(todoData) {
 }
 
 export function deleteTodos(todoId) {
-    return sendRequest(`${BASE_URL}/delete/${todoId}`, 'DELETE');
+    console.log('deleted from services')
+    sendRequest(`${BASE_URL}/delete/${todoId}`, 'DELETE');
+    // return sendRequest(`${BASE_URL}/delete/${todoId}`, 'DELETE');
 }
 
 export async function updateTodos(todoId, todoData) {

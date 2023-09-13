@@ -33,8 +33,12 @@ export default function TodoListPage() {
   }
 
   async function deleteTodo(todoID){
-    alert("Delete Todo: "+todoID)
     await todosAPI.deleteTodos(todoID);
+    alert("Delete Todo: "+todoID);
+    console.log('delete function');
+    window.location.reload();
+    // return false;
+    // navigate('/todos')
   }
 
   return (
