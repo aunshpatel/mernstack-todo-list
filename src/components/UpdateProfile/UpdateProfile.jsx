@@ -31,9 +31,7 @@ export default function UpdateProfilePage({ user, setUser }) {
             setUsername('');
             setEmail('');
             
-            
-            alert('Todo updated successfully. You will now be redirected to the Todo List Page.');
-            // setUser(usersServices.getUser())
+            alert('Profile updated successfully. You will now be redirected to the Todo List Page.');
             navigate('/todos');
         } catch (err) {
             console.log('Error creating todo: ', err);
