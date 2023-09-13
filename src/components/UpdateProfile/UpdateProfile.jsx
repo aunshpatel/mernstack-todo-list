@@ -3,6 +3,7 @@ import { json, useNavigate } from "react-router-dom";
 import * as usersAPI from '../../utilities/users-api';
 import { useState, useEffect} from 'react';
 import * as usersServices from '../../utilities/users-service';
+import "../../index.css";
 
 export default function UpdateProfilePage({ user, setUser }) {
     const navigate = useNavigate();

@@ -311,3 +311,7 @@ textarea{
   align-items: center;
 }
 table{border:1px solid white;}
+.updateProfileBtn{
+  justify-content: center;
+  display: flex;
+}
